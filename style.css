@@ -1,0 +1,58 @@
+/* Simple, modern CSS for U-nice Vogue - only HTML & CSS files included */
+
+/* Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Poppins',sans-serif;line-height:1.5;color:#222;background:#f7f7f8}
+
+/* Hero */
+.hero-section{
+  height:72vh;
+  min-height:480px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:linear-gradient(135deg,#111 0%, #333 100%);
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+}
+.hero-content{max-width:960px;padding:40px 20px;animation:heroEnter .9s ease-out both}
+.hero-content h1{font-size:3.2rem;letter-spacing:1px;margin-bottom:8px}
+.hero-content .slogan{font-size:1.1rem;opacity:0.95;margin-bottom:18px}
+
+/* Buttons */
+.btn{display:inline-block;padding:12px 26px;border-radius:28px;text-decoration:none;font-weight:600;transition:transform .25s ease,box-shadow .25s ease}
+.btn-primary{background:#ff4b5c;color:#fff;box-shadow:0 8px 20px rgba(255,75,92,.14)}
+.btn-primary:focus,.btn-primary:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(255,75,92,.18)}
+
+/* Sections */
+.content-section{padding:64px 20px;text-align:center;background:#fff}
+.content-section:nth-of-type(even){background:#fbfbfb}
+.content-section h2{font-size:2rem;margin-bottom:16px;position:relative}
+
+/* Product grid */
+.product-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));max-width:1100px;margin:18px auto 0;padding:0 10px}
+.product-card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(17,17,17,.06);transition:transform .35s cubic-bezier(.2,.9,.2,1),box-shadow .35s ease}
+.product-card:hover{transform:translateY(-10px);box-shadow:0 18px 40px rgba(17,17,17,.12)}
+.product-media{height:160px;border-radius:8px;margin-bottom:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#eee,#ddd);color:#666;font-weight:700}
+.product-media.placeholder{font-size:1.05rem;letter-spacing:1px}
+
+/* Typography */
+.product-card h3{font-size:1.05rem;margin-bottom:6px}
+.product-card .desc{font-size:.95rem;color:#555;margin-bottom:12px}
+.price{color:#ff4b5c;font-weight:700}
+
+/* Footer */
+footer{padding:18px 12px;text-align:center;background:#111;color:#fff;margin-top:28px;border-top:4px solid rgba(255,75,92,.06)}
+
+/* Animations */
+@keyframes heroEnter{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+/* Responsive tweaks */
+@media (max-width:640px){
+  .hero-content h1{font-size:2rem}
+  .hero-content .slogan{font-size:.98rem}
+  .product-media{height:120px}
+}
